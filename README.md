@@ -1,50 +1,126 @@
-# Welcome to your Expo app 👋
+# 📱 Country Info Mobile App
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+## 📌 Overview
 
-## Get started
+This mobile application allows users to explore a list of countries, view detailed information about each country (such as states, country code, flag, and capital), and switch between light and dark themes. The app is deployed on Appetize.io for online testing.
 
-1. Install dependencies
+## 🚀 Features
 
-   ```bash
-   npm install
-   ```
+### 🌍 Country List
 
-2. Start the app
+-   Fetches and displays a list of countries from a REST API.
+-   Provides a scrollable list of countries.
+-   Includes a **search bar** to filter countries by name.
 
-   ```bash
-    npx expo start
-   ```
+### 📖 Country Details
 
-In the output, you'll find options to open the app in a
+When a country is selected, the app displays:
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+-   **Name**
+-   **States/Provinces** (if available)
+-   **Flag** (image)
+-   **Population**
+-   **Capital city**
+-   **Current President** (if available)
+-   **Continent**
+-   **Country Code**
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+### 🎨 Theme Customization
 
-## Get a fresh project
+-   Users can switch between **light** and **dark** modes.
+-   The theme applies across the entire app, including background, text, and buttons.
 
-When you're ready, run:
+### 📱 App Deployment
 
-```bash
-npm run reset-project
+-   The app is deployed to [Appetize.io](https://appetize.io/app/b_x5zc66dqyceu56tova7xhwxcxa) for easy online access.
+
+## 🖌 UI Design
+
+The design follows the Figma sample provided for the task.
+
+### 🏠 Home Screen:
+
+-   Displays a list of countries.
+-   Includes a **search bar** for filtering countries.
+-   A **theme toggle** button for switching between light and dark themes.
+
+### 📍 Country Details Screen:
+
+-   Displays country information (name, flag, country code, capital, etc.).
+-   Shows states/provinces (if applicable).
+-   A **back button** to return to the country list.
+-   A **theme toggle switch** in the header to switch themes.
+
+### 📏 Responsive Design:
+
+-   The app adjusts to different screen sizes for an optimal user experience.
+
+## 🛠️ Tech Stack & Dependencies
+
+-   **React Native** (Expo or CLI)
+-   **REST API** for fetching country data
+-   **Context API / Redux** for state management (if applicable)
+-   **React Navigation** for navigation between screens
+-   **Styled Components / NativeWind** for styling
+-   **AsyncStorage / MMKV** for persisting theme preference
+-   **Appetize.io** for deployment
+
+## 📂 Project Setup
+
+### 1️⃣ Clone the Repository
+
+```sh
+git clone https://github.com/KING-REX/HNG-Mobile-Stage-2.git
+cd HNG-Mobile-Stage-2
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+### 2️⃣ Install Dependencies
 
-## Learn more
+For projects using Expo:
 
-To learn more about developing your project with Expo, look at the following resources:
+```sh
+npm install  # or yarn install
+```
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+For React Native CLI projects:
 
-## Join the community
+```sh
+npx react-native install
+```
 
-Join our community of developers creating universal apps.
+### 3️⃣ Run the App
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+For Expo:
+
+```sh
+npx expo start
+```
+
+For React Native CLI:
+
+```sh
+npx react-native run-android  # for Android
+npx react-native run-ios      # for iOS
+```
+
+### 4️⃣ Deploy to Appetize.io
+
+1. Build the project using:
+
+```sh
+eas build -p android --profile preview # for Android
+eas build -p ios --profile preview     # for iOS
+```
+
+2. Upload the generated `.apk` or `.app` file to [Appetize.io](https://appetize.io).
+
+## 👥 Contribution Guide
+
+-   Fork the repository.
+-   Create a new branch.
+-   Make changes and test thoroughly.
+-   Submit a pull request.
+
+## 📜 License
+
+This project is licensed under the **Apache License 2.0**. See the [LICENSE](https://github.com/KING-REX/HNG-Mobile-Stage-2/blob/master/LICENSE) file for details.
